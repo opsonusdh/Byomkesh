@@ -832,3 +832,9 @@ known_patterns = {
     "Vimeo": ["we couldn’t find that page"],
     "Roblox": ["user not found", "looks like this page doesn’t exist"]
 }
+proxies = [
+    "http://165.225.112.163:10605",
+    "http://103.105.49.53:80",
+    "http://103.160.201.76:8080",
+    # Add more from trusted sources
+]
