@@ -5,7 +5,7 @@ import threading
 from queue import Queue
 import time
 import os
-from requirements import build_platforms, user_agents, known_found_status, categorized_platforms, known_patterns
+from requirements import build_platforms, user_agents, known_found_status, categorized_platforms, known_patterns, proxies
 
 # Disable SSL warnings where needed
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -28,12 +28,13 @@ def request_url(url, allow_insecure=False, retries=3):
     time.sleep(random.uniform(0.2, 0.8))
     for _ in range(retries):
         try:
+            proxy = {"http": random.choice(proxies), "https": random.choice(proxies)}
             headers = {
                 "User-Agent": random.choice(user_agents),
                 "Accept-Language": "en-US,en;q=0.9",
                 "Referer": "https://www.google.com/"
             }
-            resp = requests.get(url, headers=headers, timeout=5, verify=not allow_insecure)
+            resp = requests.get(url, headers=headers, timeout=5, verify=not allow_insecure, proxies=proxy)
             return resp.status_code, resp.text, None
         except requests.RequestException as e:
             error_name = e.__class__.__name__
