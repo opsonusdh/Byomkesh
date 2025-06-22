@@ -39,14 +39,14 @@ def request_url(url, allow_insecure=False, retries=3):
             proxy_dict = {"http": proxy, "https": proxy}
 
             resp = requests.get(url, headers=headers, timeout=7, verify=not allow_insecure, proxies=proxy_dict)
-            return resp.status_code, None
+            return resp.status_code, resp.text, None
         except requests.RequestException as e:
             error_name = e.__class__.__name__
             if error_name in ["ConnectionError", "Timeout"]:
                 time.sleep(1)
                 continue
-            return None, error_name
-    return None, "Connection failed after retries"
+            return None,None, error_name
+    return None,None, "Connection failed after retries"
     
 # Interpretation per platform
 def interpret_status(platform, status_code, html, error):
