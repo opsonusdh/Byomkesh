@@ -25,25 +25,29 @@ print('\n\n')
 
 # Request handler
 def request_url(url, allow_insecure=False, retries=3):
-    time.sleep(random.uniform(0.2, 0.8))
+    time.sleep(random.uniform(0.2, 0.8)) 
     for _ in range(retries):
         try:
-            proxy = {"http": random.choice(proxies), "https": random.choice(proxies)}
             headers = {
                 "User-Agent": random.choice(user_agents),
                 "Accept-Language": "en-US,en;q=0.9",
                 "Referer": "https://www.google.com/"
             }
-            resp = requests.get(url, headers=headers, timeout=5, verify=not allow_insecure, proxies=proxy)
-            return resp.status_code, resp.text, None
+
+            # Pick a random proxy
+            proxy = random.choice(proxies)
+            proxy_dict = {"http": proxy, "https": proxy}
+
+            resp = requests.get(url, headers=headers, timeout=7, verify=not allow_insecure, proxies=proxy_dict)
+            return resp.status_code, None
         except requests.RequestException as e:
             error_name = e.__class__.__name__
             if error_name in ["ConnectionError", "Timeout"]:
                 time.sleep(1)
                 continue
-            return None, None, error_name
-    return None, None, "Connection failed after retries"
-
+            return None, error_name
+    return None, "Connection failed after retries"
+    
 # Interpretation per platform
 def interpret_status(platform, status_code, html, error):
     if error:
