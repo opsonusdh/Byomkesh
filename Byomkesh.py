@@ -85,7 +85,7 @@ def get_category(platform):
             return category
     return "Other"
 # Main checking function
-def check_username(username, num=5):
+def check_username(username, num=1):
     platforms = build_platforms(username)
     q = Queue()
     for platform, data in platforms.items():
@@ -138,7 +138,7 @@ def check_username(username, num=5):
 if __name__ == "__main__":
     user = input(f"{CYAN}[?] Enter a username to check:{RESET} ").strip()
     try:
-        num = int(input(f"{CYAN}[?] Enter Number of Threads: {RESET}"))
+        num = int(input(f"{CYAN}[?] Enter Number of Threads(best and default: 1): {RESET}"))
         if num <= 0:
             raise ValueError
         os.system('clear')
