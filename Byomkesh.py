@@ -16,9 +16,17 @@ YELLOW = '\033[93m'
 CYAN = '\033[96m'
 RESET = '\033[0m'
 os.system('clear')
-print(RED+"=============="+RESET)
-print(YELLOW+"   Byomkesh   "+RESET)
-print(RED+"=============="+RESET)
+print(YELLOW+"""                                                                                  
+`7MM"\""Yp,                                     `7MM                     `7MM        
+  MM    Yb                                       MM                       MM        
+  MM    dP `7M'   `MF',pW"Wq.`7MMpMMMb.pMMMb.    MM  ,MP'.gP"Ya  ,pP"Ybd  MMpMMMb.  
+  MM"\""bg.   VA   ,V 6W'   `Wb MM    MM    MM    MM ;Y  ,M'   Yb 8I   `"  MM    MM  
+  MM    `Y    VA ,V  8M     M8 MM    MM    MM    MM;Mm  8M""\""\"" `YMMMa.  MM    MM  
+  MM    ,9     VVV   YA.   ,A9 MM    MM    MM    MM `Mb.YM.    , L.   I8  MM    MM  
+.JMMmmmd9      ,V     `Ybmd9'.JMML  JMML  JMML..JMML. YA.`Mbmmd' M9mmmP'.JMML  JMML.
+              ,V                                                                    
+           OOb"                                                                     """+RESET)
+print(RED+"              https://github.com/opsonusdh/Byomkesh"+RESET)
 print('\n\n')
 # Request handler
 def request_url(url, allow_insecure=False, retries=3):
@@ -160,9 +168,17 @@ if __name__ == "__main__":
         print("Using 1 Thread.")
         input('Press Enter: ')
         os.system('clear')
-        print(RED+"=============="+RESET)
-        print(YELLOW+"   Byomkesh   "+RESET)
-        print(RED+"=============="+RESET)
+        print(YELLOW+"""                                                                                  
+`7MM"\""Yp,                                     `7MM                     `7MM        
+  MM    Yb                                       MM                       MM        
+  MM    dP `7M'   `MF',pW"Wq.`7MMpMMMb.pMMMb.    MM  ,MP'.gP"Ya  ,pP"Ybd  MMpMMMb.  
+  MM"\""bg.   VA   ,V 6W'   `Wb MM    MM    MM    MM ;Y  ,M'   Yb 8I   `"  MM    MM  
+  MM    `Y    VA ,V  8M     M8 MM    MM    MM    MM;Mm  8M""\""\"" `YMMMa.  MM    MM  
+  MM    ,9     VVV   YA.   ,A9 MM    MM    MM    MM `Mb.YM.    , L.   I8  MM    MM  
+.JMMmmmd9      ,V     `Ybmd9'.JMML  JMML  JMML..JMML. YA.`Mbmmd' M9mmmP'.JMML  JMML.
+              ,V                                                                    
+           OOb"                                                                     """+RESET)
+        print(RED+"              https://github.com/opsonusdh/Byomkesh"+RESET)
         print('\n\n')
         print(f'Finding {user}...')
         check_username(user)
