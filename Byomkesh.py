@@ -149,7 +149,7 @@ if __name__ == "__main__":
         print(f'Finding {user}...')
         check_username(user, num)
     except:
-        print("Using 5 Threads.")
+        print("Using 1 Thread.")
         input('Press Enter: ')
         os.system('clear')
         print(RED+"=============="+RESET)
