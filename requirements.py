@@ -812,7 +812,7 @@ categorized_platforms = {
     ]
 }
 known_patterns = {
-    "Instagram": ["sorry, this page isn't available", "page isn't available"],
+    "Instagram": ["sorry, this page isn't available", "page isn't available", "the link you followed may be broken, or the page may have been removed.", "go back to instagram"],
     "Twitter": ["this account doesn’t exist", "account suspended", "page doesn’t exist"],
     "Facebook": ["this content isn't available", "profile not available"],
     "Reddit": ["page not found", "nobody on reddit goes by that name"],
