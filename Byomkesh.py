@@ -164,7 +164,7 @@ if __name__ == "__main__":
         print('\n\n')
         print(f'Finding {user}...')
         check_username(user, num)
-    except:
+    except ValueError:
         print("Using 1 Thread.")
         input('Press Enter: ')
         os.system('clear')
