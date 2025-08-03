@@ -162,7 +162,7 @@ if __name__ == "__main__":
            OOb"                                                                     """+RESET)
         print(RED+"              https://github.com/opsonusdh/Byomkesh"+RESET)
         print('\n\n')
-        print(f'Finding {user}...')
+        print(f'Finding {user} in 300+ sites...')
         check_username(user, num)
     except ValueError:
         print("Using 1 Thread.")
