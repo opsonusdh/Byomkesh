@@ -152,7 +152,7 @@ if __name__ == "__main__":
 .JMMmmmd9      ,V     `Ybmd9'.JMML  JMML  JMML..JMML. YA.`Mbmmd' M9mmmP'.JMML  JMML.
               ,V                                                                    
            OOb"                                                                     """+RESET)
-        print(RED+"=============="+RESET)
+        print(RED+"              https://github.com/opsonusdh/Byomkesh"+RESET)
         print('\n\n')
         print(f'Finding {user}...')
         check_username(user, num)
